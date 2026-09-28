@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Deepika! 🎉❤️ | A Special Surprise</title>
+
+    <meta name="description"
+        content="A special birthday surprise website dedicated to my best friend Deepika. Filled with memories, messages, music, and interactive magic!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+
+    <!-- =========================================
+         BACKGROUND MUSIC
+    ========================================== -->
+
+    <!-- IMPORTANT:
+         birthday-song.mp3 is in the SAME folder as index.html -->
+
+    <audio id="birthday-audio" src="birthday-song.mp3" loop preload="auto">
+    </audio>
+
+
+    <!-- MUSIC BUTTON -->
+
+    <button id="music-toggle" class="floating-music-btn" aria-label="Toggle Background Music"
+        title="Play/Pause Birthday Song">
+
+        <span class="music-icon">🎵</span>
+
+        <span class="music-waves">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+
+    </button>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar-wrapper">
+
+        <nav class="navbar glass-card">
+
+            <div class="nav-brand" id="secret-cake" title="Click for a cake surprise! 🎂">
+
+                <span class="brand-name">
+                    HBD To My BestFrnd 🥳
+                </span>
+
+            </div>
+
+
+            <ul class="nav-links" id="nav-links">
+
+                <li>
+                    <a href="#hero" class="nav-link active">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#memories" class="nav-link">
+                        <i class="fa-solid fa-heart"></i>
+                        Memories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#journey" class="nav-link">
+                        <i class="fa-solid fa-compass"></i>
+                        Journey
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#message" class="nav-link">
+                        <i class="fa-solid fa-envelope"></i>
+                        Message
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#surprise" class="nav-link">
+                        <i class="fa-solid fa-gift"></i>
+                        Surprise
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HERO SECTION
+    ========================================== -->
+
+    <section id="hero" class="hero-section">
+
+        <div class="container hero-container">
+
+            <h1 class="hero-title animate-slide-up">
+
+                🎉 HAPPY BIRTHDAY
+
+                <span class="title-cake" id="hero-cake">
+                    🎂
+                </span>
+
+            </h1>
+
+
+            <h2 class="hero-subtitle animate-slide-up delay-1">
+
+                To My Best Friend
+
+                <span class="hero-heart" id="easter-heart" title="Click me! 🥳">
+                    🥳
+                </span>
+
+                <br>
+
+                <span class="friend-name-tag" id="friend-name-display">
+                    Deepika
+                </span>
+
+            </h2>
+
+
+            <p class="hero-quote animate-fade-in delay-2">
+
+                "Today isn't just another day...<br>
+
+                it's the day someone truly special was born. ✨"
+
+            </p>
+
+
+            <div class="hero-cta-wrapper animate-bounce-in delay-3">
+
+                <button id="start-surprise-btn" class="btn btn-primary cta-btn glow-effect">
+
+                    <span class="btn-text">
+                        ✨ Open Your Surprise ✨
+                    </span>
+
+                    <span class="btn-shine"></span>
+
+                </button>
+
+            </div>
+
+
+            <div class="hero-decorations">
+
+                <span class="floating-item item-1">
+                    🎈
+                </span>
+
+                <span class="floating-item item-2">
+                    💖
+                </span>
+
+                <span class="floating-item item-3">
+                    🌟
+                </span>
+
+                <span class="floating-item item-4">
+                    🥳
+                </span>
+
+                <span class="floating-item item-5">
+                    ✨
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="scroll-down-indicator">
+
+            <a href="#countdown" aria-label="Scroll Down">
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         COUNTDOWN
+    ========================================== -->
+
+    <section id="countdown" class="countdown-section section-padding">
+
+        <div class="container">
+
+            <div class="section-header text-center reveal-on-scroll">
+
+                <span class="section-tag">
+                    🥳 Celebration Clock ⌚
+                </span>
+
+                <h2 class="section-title">
+                    Counting Down To Your Special Day
+                </h2>
+
+            </div>
+
+
+            <div class="countdown-container glass-card reveal-on-scroll delay-1">
+
+                <div class="countdown-grid">
+
+                    <div class="countdown-card">
+
+                        <div class="countdown-value-box">
+
+                            <span id="cd-days" class="countdown-number">
+                                00
+                            </span>
+
+                        </div>
+
+                        <span class="countdown-label">
+                            Days
+                        </span>
+
+                    </div>
+
+
+                    <div class="countdown-divider">
+                        :
+                    </div>
+
+
+                    <div class="countdown-card">
+
+                        <div class="countdown-value-box">
+
+                            <span id="cd-hours" class="countdown-number">
+                                00
+                            </span>
+
+                        </div>
+
+                        <span class="countdown-label">
+                            Hours
+                        </span>
+
+                    </div>
+
+
+                    <div class="countdown-divider">
+                        :
+                    </div>
+
+
+                    <div class="countdown-card">
+
+                        <div class="countdown-value-box">
+
+                            <span id="cd-minutes" class="countdown-number">
+                                00
+                            </span>
+
+                        </div>
+
+                        <span class="countdown-label">
+                            Minutes
+                        </span>
+
+                    </div>
+
+
+                    <div class="countdown-divider">
+                        :
+                    </div>
+
+
+                    <div class="countdown-card">
+
+                        <div class="countdown-value-box">
+
+                            <span id="cd-seconds" class="countdown-number">
+                                00
+                            </span>
+
+                        </div>
+
+                        <span class="countdown-label">
+                            Seconds
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div id="countdown-banner" class="countdown-status-banner">
+
+                    🎉 Celebration mode is active!
+                    It's your special day! 🎂✨
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MEMORIES GALLERY
+    ========================================== -->
+
+    <section id="memories" class="memories-section section-padding">
+
+        <div class="container">
+
+            <div class="section-header text-center reveal-on-scroll">
+
+                <span class="section-tag">
+                    📸 Photo Album 📸
+                </span>
+
+                <h2 class="section-title">
+                    ✨ Our Memories ✨
+                </h2>
+
+                <p class="section-subtitle">
+                    Click on any photo to expand the memory ❤️
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+
+                <!-- PHOTO 1 -->
+
+                <div class="gallery-card polaroid-card tilt-left reveal-on-scroll" data-photo="photo1.jpg"
+                    data-caption="That crazy day 😂">
+
+                    <div class="polaroid-inner">
+
+                        <div class="polaroid-img-wrapper">
+
+                            <img src="photo1.jpg" alt="Memory Photo 1" loading="lazy"
+                                onerror="this.style.display='none';">
+
+                        </div>
+
+
+                        <div class="polaroid-caption">
+
+                            <span>
+                                That was a crazy day 😂
+                            </span>
+
+                            <i class="fa-regular fa-heart like-heart"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 2 -->
+
+                <div class="gallery-card polaroid-card tilt-right reveal-on-scroll delay-1" data-photo="photo2.jpg"
+                    data-caption="Cutie 😍">
+
+                    <div class="polaroid-inner">
+
+                        <div class="polaroid-img-wrapper">
+
+                            <img src="photo2.jpg" alt="Memory Photo 2" loading="lazy"
+                                onerror="this.style.display='none';">
+
+                        </div>
+
+
+                        <div class="polaroid-caption">
+
+                            <span>
+                                Cutie 😍
+                            </span>
+
+                            <i class="fa-regular fa-heart like-heart"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 3 -->
+
+                <div class="gallery-card polaroid-card tilt-left reveal-on-scroll delay-2" data-photo="photo3.jpg"
+                    data-caption="One of my favorite memories from that day 😂">
+
+                    <div class="polaroid-inner">
+
+                        <div class="polaroid-img-wrapper">
+
+                            <img src="photo3.jpg" alt="Memory Photo 3" loading="lazy"
+                                onerror="this.style.display='none';">
+
+                        </div>
+
+
+                        <div class="polaroid-caption">
+
+                            <span>
+                                One of my favorite memories from that day 😂
+                            </span>
+
+                            <i class="fa-regular fa-heart like-heart"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHOTO 4 -->
+
+                <div class="gallery-card polaroid-card tilt-right reveal-on-scroll" data-photo="photo4.jpg"
+                    data-caption="Shokuladi NO.1 ✨">
+
+                    <div class="polaroid-inner">
+
+                        <div class="polaroid-img-wrapper">
+
+                            <img src="photo4.jpg" alt="Memory Photo 4" loading="lazy"
+                                onerror="this.style.display='none';">
+
+                        </div>
+
+
+                        <div class="polaroid-caption">
+
+                            <span>
+                                Shokuladi NO.1 ✨
+                            </span>
+
+                            <i class="fa-regular fa-heart like-heart"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FRIENDSHIP JOURNEY
+    ========================================== -->
+
+    <section id="journey" class="journey-section section-padding">
+
+        <div class="container">
+
+            <div class="section-header text-center reveal-on-scroll">
+
+                <span class="section-tag">
+                    🌟 Our Story 🌟
+                </span>
+
+                <h2 class="section-title">
+                    💫 Our Journey
+                </h2>
+
+                <p class="section-subtitle">
+                    How a simple friendship became an irreplaceable bond ❤️
+                </p>
+
+            </div>
+
+
+            <div class="timeline-container">
+
+                <div class="timeline-line"></div>
+
+
+                <!-- JOURNEY 1 -->
+
+                <div class="timeline-item left reveal-on-scroll">
+
+                    <div class="timeline-icon-box">
+                        <span>📍</span>
+                    </div>
+
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-badge">
+                            The Beginning
+                        </div>
+
+                        <h3>
+                            Where our friendship started...
+                        </h3>
+
+                        <p>
+                            It started with telugu Exam Paper and unexpected chats,
+                            but little did we know it would become one of the
+                            most meaningful friendships of my life.
+                        </p>
+
+                        <span class="timeline-sparkle">
+                            ✨
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JOURNEY 2 -->
+
+                <div class="timeline-item right reveal-on-scroll delay-1">
+
+                    <div class="timeline-icon-box">
+                        <span>😂</span>
+                    </div>
+
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-badge">
+                            The Crazy Moments
+                        </div>
+
+                        <h3>
+                            Too many memories to count.
+                        </h3>
+
+                        <p>
+                            That time in my break was the best time.
+                            we have too much fun together...
+                            we never miss a chance to tease each other...
+                        </p>
+
+                        <span class="timeline-sparkle">
+                            🌟
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JOURNEY 3 -->
+
+                <div class="timeline-item left reveal-on-scroll">
+
+                    <div class="timeline-icon-box">
+                        <span>❤️</span>
+                    </div>
+
+                    <div class="timeline-content glass-card">
+
+                        <div class="timeline-badge">
+                            The Best Memories
+                        </div>
+
+                        <h3>
+                            Some moments are impossible to forget.
+                        </h3>
+
+                        <p>
+                            Some moments are really impossible to forget.
+                            The time spend in calls with you..
+                            the time i woke up early in the morning to wish you.
+                        </p>
+
+                        <span class="timeline-sparkle">
+                            💖
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JOURNEY 4 -->
+
+                <div class="timeline-item right reveal-on-scroll delay-1">
+
+                    <div class="timeline-icon-box">
+                        <span>🌟</span>
+                    </div>
+
+                    <div class="timeline-content glass-card highlight-card">
+
+                        <div class="timeline-badge badge-gold">
+                            Today & Beyond
+                        </div>
+
+                        <h3>
+                            Celebrating the amazing person you are.
+                        </h3>
+
+                        <p>
+                            I want you to always be happy, healthy, and smiling.
+                            And always remember that i am always there for you no matter what happens.
+                            may be i am not 1st, i will be there for you every thime you needed...
+                        </p>
+
+                        <span class="timeline-sparkle">
+                            🥂
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SPECIAL MESSAGE
+    ========================================== -->
+
+    <section id="message" class="message-section section-padding">
+
+        <div class="container">
+
+            <div class="section-header text-center reveal-on-scroll">
+
+                <span class="section-tag">
+                    💌 From My Heart 💌
+                </span>
+
+                <h2 class="section-title">
+                    A Message For You
+                </h2>
+
+            </div>
+
+
+            <div class="message-card-wrapper reveal-on-scroll delay-1">
+
+                <div class="message-glass-card glass-card">
+
+                    <div class="card-envelope-header">
+
+                        <div class="envelope-stamp">
+
+                            <i class="fa-solid fa-heart"></i>
+
+                        </div>
+
+                        <div class="envelope-title">
+                            For Deepika 💕
+                        </div>
+
+                    </div>
+
+
+                    <div class="message-body">
+
+                        <div id="typewriter-text" class="typewriter-output">
+                        </div>
+
+                        <span class="typewriter-cursor">
+                            |
+                        </span>
+
+                    </div>
+
+
+                    <div class="message-signature">
+
+                        <p>
+                            With lots of love & smiles,
+                        </p>
+
+                        <div class="signature-name" id="sender-name-display">
+
+                            Pranav ❤️
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SURPRISE GIFT
+    ========================================== -->
+
+    <section id="surprise" class="surprise-section section-padding">
+
+        <div class="container text-center">
+
+            <div class="section-header reveal-on-scroll">
+
+                <span class="section-tag">
+                    🎁 Special Gift Box 🎁
+                </span>
+
+                <h2 class="section-title">
+                    Want Another Surprise?
+                </h2>
+
+                <p class="section-subtitle">
+                    Tap the gift box below to unwrap your special present!
+                </p>
+
+            </div>
+
+
+            <div class="gift-box-wrapper reveal-on-scroll delay-1">
+
+                <div id="gift-box" class="gift-box pulse-animation" title="Click to open your gift! 🎁">
+
+                    <div class="gift-lid">
+
+                        <div class="gift-bow"></div>
+
+                    </div>
+
+
+                    <div class="gift-body">
+
+                        <div class="gift-ribbon-vertical"></div>
+
+                        <div class="gift-ribbon-horizontal"></div>
+
+                    </div>
+
+
+                    <div class="gift-glow"></div>
+
+                </div>
+
+
+                <p class="gift-hint">
+                    👇 Tap the Box! 👇
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         COMPLIMENT GENERATOR
+    ========================================== -->
+
+    <section id="compliments" class="compliments-section section-padding">
+
+        <div class="container">
+
+            <div class="section-header text-center reveal-on-scroll">
+
+                <span class="section-tag">
+                    💖 Happiness Booster 💖
+                </span>
+
+                <h2 class="section-title">
+                    ✨ Random Compliment Generator
+                </h2>
+
+                <p class="section-subtitle">
+                    Need a quick smile? Tap the button below!
+                </p>
+
+            </div>
+
+
+            <div class="compliment-card-container reveal-on-scroll delay-1">
+
+                <div class="compliment-card glass-card">
+
+                    <div class="compliment-quote-icon">
+
+                        <i class="fa-solid fa-quote-left"></i>
+
+                    </div>
+
+
+                    <div class="compliment-display-wrapper">
+
+                        <p id="compliment-text" class="compliment-text">
+
+                            Click the button below to receive
+                            your daily dose of love and appreciation! ✨
+
+                        </p>
+
+                    </div>
+
+
+                    <button id="generate-compliment-btn" class="btn btn-secondary glow-effect">
+
+                        <span>
+                            Give Me A Compliment 💖
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FINAL CELEBRATION
+    ========================================== -->
+
+    <section id="final" class="final-section section-padding">
+
+        <div class="container text-center">
+
+            <div class="final-card glass-card reveal-on-scroll">
+
+                <div class="final-decorations">
+
+                    <span class="sparkle-icon">
+                        ✨
+                    </span>
+
+                    <span class="champagne-icon">
+                        🥂
+                    </span>
+
+                    <span class="sparkle-icon">
+                        ✨
+                    </span>
+
+                </div>
+
+
+                <h2 class="final-heading">
+                    Here's To More Memories Together 🥂✨
+                </h2>
+
+                <h3 class="final-subheading">
+                    Happy Birthday, BestFriend! ❤️
+                </h3>
+
+                <p class="final-quote">
+                    "Never change who you are.
+                    The world needs your brightness. 🌟"
+                </p>
+
+
+                <div class="final-cta">
+
+                    <button id="replay-btn" class="btn btn-primary cta-btn glow-effect">
+
+                        <span>
+                            Replay The Magic ✨
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p>
+                Crafted with lots of ❤️ for
+                <span id="footer-friend-name">
+                    Deepika
+                </span>
+                's Birthday 🎉
+            </p>
+
+            <p class="footer-subtext">
+
+                Made by
+                <span id="footer-your-name">
+                    Pranav
+                </span>
+
+                | Forever Best Friends 💕
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         PHOTO LIGHTBOX MODAL
+    ========================================== -->
+
+    <div id="photo-modal" class="modal-overlay" aria-hidden="true">
+
+        <div class="modal-content glass-card modal-photo-content">
+
+            <button class="modal-close" id="modal-photo-close" aria-label="Close Modal">
+
+                &times;
+
+            </button>
+
+
+            <div class="modal-photo-wrapper">
+
+                <img id="modal-img" src="" alt="Expanded Memory">
+
+            </div>
+
+
+            <div class="modal-photo-caption">
+
+                <p id="modal-caption-text"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         SURPRISE MODAL
+    ========================================== -->
+
+    <div id="surprise-modal" class="modal-overlay" aria-hidden="true">
+
+        <div class="modal-content glass-card modal-surprise-content text-center">
+
+            <button class="modal-close" id="modal-surprise-close" aria-label="Close Modal">
+
+                &times;
+
+            </button>
+
+
+            <div class="modal-badge-icon">
+                🎉
+            </div>
+
+
+            <h2 class="modal-title">
+                🎉 SURPRISE! 🎉
+            </h2>
+
+
+            <p class="modal-message">
+
+                You are officially one of the best,
+                sweetest, and most amazing people
+                I've ever met in my life. ❤️
+
+            </p>
+
+
+            <div class="modal-action-btn">
+
+                <button id="bonus-surprise-btn" class="btn btn-secondary glow-effect">
+
+                    <span>
+                        One More Surprise 😏
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         BONUS SURPRISE MODAL
+    ========================================== -->
+
+    <div id="bonus-modal" class="modal-overlay" aria-hidden="true">
+
+        <div class="modal-content glass-card modal-bonus-content text-center">
+
+            <button class="modal-close" id="modal-bonus-close" aria-label="Close Modal">
+
+                &times;
+
+            </button>
+
+
+            <div class="modal-badge-icon">
+                👑
+            </div>
+
+
+            <h2 class="modal-title">
+                🍕 Lifetime VIP Coupon 🍿
+            </h2>
+
+
+            <div class="coupon-box">
+
+                <p class="coupon-title">
+                    THIS COUPON ENTITLES YOU TO:
+                </p>
+
+
+                <ul class="coupon-list">
+
+                    <li>
+                        ✨ Unlimited Advice & Chats
+                    </li>
+
+                    <li>
+                        👑 100% Priority Friend Rights Forever!
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <p class="modal-subtext">
+                No expiration date. Non-transferable! ❤️
+            </p>
+
+
+            <button class="btn btn-primary modal-close-btn" id="modal-bonus-ok">
+
+                <span>
+                    Claim Coupon 💖
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         EASTER EGG TOAST MODAL
+    ========================================== -->
+
+    <div id="toast-modal" class="modal-overlay" aria-hidden="true">
+
+        <div class="modal-content glass-card modal-toast-content text-center">
+
+            <button class="modal-close" id="toast-close" aria-label="Close Toast">
+
+                &times;
+
+            </button>
+
+
+            <div id="toast-icon" class="toast-icon">
+
+                🎁
+
+            </div>
+
+
+            <h3 id="toast-title" class="toast-title">
+
+                Secret Unlocked!
+
+            </h3>
+
+
+            <p id="toast-message" class="toast-message">
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
